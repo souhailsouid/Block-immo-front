@@ -1,11 +1,12 @@
 {
   "expo": {
+    "owner": "elemane",
     "name": "Block-immo-front",
     "slug": "Block-immo-front",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "scheme": "com.myfirstapp.souhail",
     "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/images/splash.png",
@@ -13,13 +14,18 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.myfirstapp.souhail",
+      "config": {
+        "googleServicesFile": "./GoogleService-Info.plist"
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.myfirstapp.souhail"
     },
     "web": {
       "bundler": "metro",
@@ -27,7 +33,13 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      [
+        "@react-native-google-signin/google-signin",
+        {
+          "iosUrlScheme": "com.googleusercontent.apps.286675722751-vsaoh02v26ck57mqllncfcgmsfkrdcq3"
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true
